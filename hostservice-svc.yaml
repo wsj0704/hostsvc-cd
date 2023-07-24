@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hostservice-svc
+spec:
+  selector:
+    app: hostservice
+  ports:
+  - port: 80                        ## 업스트림 포트
+    targetPort: 8080                ## 정해진 포트

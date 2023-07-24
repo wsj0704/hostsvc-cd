@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hostservice-deploy
+spec:
+  selector:
+    matchLabels:
+      app: hostservice
+  template:
+    metadata:
+      labels:
+        app: hostservice
+    spec:
+      containers:
+      - name: hostservice-container
+        image: wantsomewalnut/node-app
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
