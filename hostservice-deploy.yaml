@@ -13,11 +13,7 @@ spec:
     spec:
       containers:
       - name: hostservice-container
-<<<<<<< HEAD
         image: wantsomewalnut/hostservice:1.0
-=======
-        images: dangtong/node-app:84e94216f6fbe430d09c0125f543115e26c447a2
->>>>>>> 63e0c9f3169a3118f3f36769a7a159a83afb375a
         resources:
           limits:
             memory: "128Mi"
